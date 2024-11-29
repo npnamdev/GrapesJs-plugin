@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        .even {
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Scroll Down to See Animations</h1>
+    </section>
+    <section>
+        <div class="box" data-aos="fade-up"></div>
+    </section>
+    <section>
+        <div class="box even" data-aos="fade-right"></div>
+    </section>
+    <section>
+        <h1>End of Animations</h1>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Thời gian hiệu ứng (ms)
+            once: true // Chỉ chạy hiệu ứng một lần
+        });
+    </script>
+</body>
+
+</html>
